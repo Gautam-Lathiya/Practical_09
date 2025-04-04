@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Style Text";
+}
+
+<h2>Style Text with JavaScript</h2>
+
+<br>
+<hr />
+<label id="displayLabel" style="font-size: 20px;"></label>
+<hr />
+<br>
+
+<button onclick="printText()">PRINT TEXT</button>
+<button onclick="makeBold()">BOLD</button>
+<button onclick="makeItalic()">ITALIC</button>
+<button onclick="makeUnderline()">UNDERLINE</button>
+<button onclick="resetStyle()">RESET</button>
+
+<script>
+    function printText() {
+        document.getElementById("displayLabel").innerText = "Hello World";
+    }
+
+    function makeBold() {
+        document.getElementById("displayLabel").style.fontWeight = "bold";
+    }
+
+    function makeItalic() {
+        document.getElementById("displayLabel").style.fontStyle = "italic";
+    }
+
+    function makeUnderline() {
+        document.getElementById("displayLabel").style.textDecoration = "underline";
+    }
+
+    function resetStyle() {
+        const label = document.getElementById("displayLabel");
+        label.style.fontWeight = "normal";
+        label.style.fontStyle = "normal";
+        label.style.textDecoration = "none";
+    }
+</script>
